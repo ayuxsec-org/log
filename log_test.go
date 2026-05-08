@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/ayuxsec/log"
+	"github.com/ayuxsec-org/log"
 )
 
 func TestLogger(t *testing.T) {
