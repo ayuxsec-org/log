@@ -12,4 +12,5 @@ func TestLogger(t *testing.T) {
 	log.WithTrace = true
 	log.Info("this is an info message")
 	log.Errorf("error: %v", errors.New("test error"))
+	log.Fatalf("error: %v", errors.New("fatal error"))
 }

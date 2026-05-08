@@ -1,6 +1,9 @@
 package log
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func Info(msg string) {
 	if DisableInfo {
@@ -42,4 +45,14 @@ func Errorf(formatStr string, a ...any) {
 		return
 	}
 	fmt.Fprint(Target, errorPrefix+format(fmt.Sprintf(formatStr, a...)))
+}
+
+func Fatal(msg string) {
+	fmt.Fprint(Target, fatalPrefix+format(msg))
+	os.Exit(1)
+}
+
+func Fatalf(formatStr string, a ...any) {
+	fmt.Fprint(Target, fatalPrefix+format(fmt.Sprintf(formatStr, a...)))
+	os.Exit(1)
 }

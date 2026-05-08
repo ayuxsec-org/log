@@ -4,4 +4,5 @@ var (
 	infoPrefix  = "[info]"
 	errorPrefix = "[error]"
 	debugPrefix = "[debug]"
+	fatalPrefix = "[fatal]"
 )
