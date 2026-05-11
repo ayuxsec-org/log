@@ -19,6 +19,20 @@ func Infof(formatStr string, a ...any) {
 	fmt.Fprint(Target, infoPrefix+format(fmt.Sprintf(formatStr, a...)))
 }
 
+func Warn(msg string) {
+	if DisableWarn {
+		return
+	}
+	fmt.Fprint(Target, warnPrefix+format(msg))
+}
+
+func Warnf(formatStr string, a ...any) {
+	if DisableWarn {
+		return
+	}
+	fmt.Fprint(Target, warnPrefix+format(fmt.Sprintf(formatStr, a...)))
+}
+
 func Debug(msg string) {
 	if DisableDebug {
 		return

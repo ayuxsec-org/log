@@ -12,5 +12,6 @@ var (
 var (
 	DisableInfo  = false
 	DisableDebug = false
+	DisableWarn  = false
 	DisableError = false
 )
