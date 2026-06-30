@@ -25,5 +25,10 @@ func trace() (file string, line int) {
 	if !ok {
 		panic("failed to trace log couldn't get caller info")
 	}
+
+	if !DisableDebug {
+		return file, line
+	}
+
 	return filepath.Base(file), line
 }
