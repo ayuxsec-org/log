@@ -5,6 +5,7 @@ import (
 	"os"
 )
 
+// todo: Consider adding lightweight key/value logging if it becomes useful.
 func Info(msg string) {
 	if DisableInfo {
 		return
